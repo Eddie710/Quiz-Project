@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Take</title>
+    <style>
+        h3{
+            display: flex;
+            text-align: left;
+
+        }
+        ul{
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <form>
+        <legend><h1>Fun Quiz</h1></legend>
+        <div>
+            <h3>1. Which programming language was originally developed for space-related calculations and simulations?</h3>
+            Java <input type="radio"  name="1"><p></p>
+            Python<input type="radio"  name="1"><p></p>
+            C++<input type="radio"  name="1"><p></p>
+            Fortran<input type="radio" class="right"  name="1"><p ></p>
+            <!-- d -->
+        </div>
+        <div>
+            <h3>2. Which NASA mission used the programming language Rust for developing software?</h3>
+            Mars Rover mission<input type="radio" class="right" name="2"><p></p>
+            Spacex Falcon 9 mission<input type="radio"   name="2"><p></p>
+            Orion spacecraft mission<input type="radio"   name="2"><p></p>
+            Internation Space Station mission<input type="radio" name="2"><p>D</p>
+            <!-- //a -->
+        </div>
+        <div>
+            <h3>3. What is the name of the programming language used for creating animations and interactive graphics in web browsers?</h3>
+            Web WebGL<input type="radio"  name="3"><p></p>
+            Html<input type="radio"  name="3"><p></p>
+            CSS<input type="radio"  name="3"><p></p>
+            JavaScript<input type="radio" class="right" name="3"><p></p>
+            <!-- //d -->
+        </div>
+        <div>
+            <h3>4. What programming language is used for data analysis and visualization in the space industry?</h3>
+            Matlab<input type="radio" class="right" name="4"><p></p>
+            Ruby<input type="radio"  name="4"><p></p>
+            Swift<input type="radio" name="4"><p></p>
+            Perl<input type="radio"  name="4"><p></p>
+            <!-- //a -->
+        </div>
+        <div>
+            <h3>5. What is the name of the programming language developed by Google for building applications that can run on multiple platforms, including Android and iOS?
+                Swift
+                Kotlin
+                Flutter
+                Typescript
+            </h3>
+            Swift<input type="radio" name="5" ><p name="5"></p>
+            Kotlin<input type="radio" name="5" ><p name="5"></p>
+            Flutter<input type="radio" name="5" class="right"><p name="5"></p>
+            Typescript<input type="radio" name="5" ><p name="5"></p>
+            <!-- //c -->
+        </div>
+        <br>
+        <br>
+    </form>
+    <button id="submit">Submit</button>
+
+    
+
+</body>
+<script>
+    correctAnswers = ["D","A","D","A","C"]
+    userAnswers = []
+    var  score = 0
+    
+    const submit = document.getElementById('submit');        
+   
+        submit.addEventListener("click", () => {
+           var right = document.getElementsByClassName('right');
+           for(let i =0;i<right.length;i++){
+            if(right[i].checked == true){
+                score+=1;
+            }
+           }
+        window.alert("Your Score Is: " + score)
+        location.reload
+
+            }
+            
+        );
+</script>
+</html>
